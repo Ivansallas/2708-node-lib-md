@@ -29,5 +29,4 @@ async function pegaArquivo(caminhoDoArquivo) {
 }
 
 // Chama a função pegaArquivo com o caminho do arquivo a ser lido
-//pegaArquivo('./arquivos/texto.md');
-export default pegaArquivo;
+pegaArquivo('./arquivos/texto.md');

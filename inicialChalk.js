@@ -11,4 +11,5 @@ CPU: ${chalk.red('90%')}
 RAM: ${chalk.green('40%')}
 DISK: ${chalk.yellow('70%')}
 DISK2: ${chalk.blue('50%')}
+DISK2: ${chalk.blue('50%')}
 `);

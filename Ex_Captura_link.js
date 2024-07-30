@@ -18,7 +18,7 @@ Exemplos de URL inválidas:
 `;
 
 // Expressão regular para capturar URLs
-const padrao_url = /https?:\/\/[^\s]+/g;
+const padrao_url = /https?:\/\/[^A-a,0-100]+/g;
 // https ?:// - Corresponde a http:// ou https://.
 // [^\s] + - Corresponde a qualquer caractere que não seja espaço(\s) uma ou mais vezes(+).
 // g - O modificador global(g) indica que todas as ocorrências devem ser encontradas, não apenas a primeira.

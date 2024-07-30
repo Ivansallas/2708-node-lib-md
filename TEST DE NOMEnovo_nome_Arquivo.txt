@@ -1,0 +1,6 @@
+Testando  
+Neste script, o comando for percorre todos os arquivos .txt 
+no diretório atual e usa o comando mv para renomeá-los, 
+adicionando o prefixo "novo_nome_" a cada nome de arquivo.
+ Este é um exemplo simples, mas mostra o poder da linha de comando 
+ para automatizar tarefas repetitivas de forma eficiente.

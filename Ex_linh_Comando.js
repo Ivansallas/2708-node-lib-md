@@ -1,8 +1,8 @@
 import { readdir, rename } from 'fs/promises';
-import { extname, join } from 'path';
+import { extname, join, basename } from 'path';
 
 // Prefixo a ser adicionado
-const prefixo = 'TEST DE NOME'; //NOME DO ARQUIVO PARA SER ALTERADO 
+const prefixo = 'DocumentoEstudante'; // Novo nome do arquivo
 
 // Diretório atual
 const currentDir = process.cwd();
@@ -21,10 +21,13 @@ async function renameFiles() {
         }
 
         // Loop através de todos os arquivos .txt
-        for (const file of txtFiles) {
+        for (let i = 0; i < txtFiles.length; i++) {
+            const file = txtFiles[i];
+
             // Verifica se o arquivo já tem o prefixo para evitar renomeação desnecessária
             if (!file.startsWith(prefixo)) {
-                const newFileName = prefixo + file;
+                const fileExtension = extname(file);
+                const newFileName = `${prefixo}_${i + 1}${fileExtension}`;
                 const oldFilePath = join(currentDir, file);
                 const newFilePath = join(currentDir, newFileName);
 
